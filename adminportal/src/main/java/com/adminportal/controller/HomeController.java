@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.adminportal.domain.OwnerDetails;
+import com.adminportal.domain.security.OwnerRole;
 import com.adminportal.domain.security.PasswordResetToken;
 import com.adminportal.service.OwnerService;
 import com.adminportal.service.impl.UserSecurityService;
@@ -62,9 +63,9 @@ private JavaMailSender mailSender;
 		for(OwnerDetails ownerDetails : ownerDetailsList){
 			
 			
-			System.out.println("Owner User Name :::::::::::::"+ownerDetails.getUsername());
+			//System.out.println("Owner User Name :::::::::::::"+ownerDetails.getUsername());
 		}
-		System.out.println("ownerDetailsList:::::::::::"+ownerDetailsList.get(0));
+		//System.out.println("ownerDetailsList:::::::::::"+ownerDetailsList.get(0));
 		
 		model.addAttribute("ownerDetailsList", ownerDetailsList);
 		}catch (Exception e) {
@@ -118,7 +119,25 @@ private JavaMailSender mailSender;
 	
 	
 	@GetMapping("/deleteOwnerReuest")
-	public String deleteUser(@RequestParam Long id , Model model, HttpServletRequest request){
+	public String deleteUser(@RequestParam("id") Long id, Model model, HttpServletRequest request){
+		
+		
+		OwnerDetails  ownerDetails = ownerService.findOne(id);
+		System.out.println("Role ID ::::::::::::::::::::"+id);
+		ownerDetails.setId(id);
+		
+		
+		
+		//System.out.println(ownerRole);
+		/*OwnerDetails ownerDetails = new OwnerDetails();
+		ownerDetails.setOwnerRoles(ownerRole.getOwnerDetails());
+		*/
+		
+		//this.ownerService.delete(ownerRole);
+		
+		//ownerService.delete(ownerRole);
+		
+		//System.out.println("ownerDetails::::::"+ownerDetails.getId());
 		
 		return "redirect:/ownerRegister";
 	}

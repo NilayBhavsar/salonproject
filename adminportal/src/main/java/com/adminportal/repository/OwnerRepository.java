@@ -10,6 +10,7 @@ import com.adminportal.domain.OwnerDetails;
 
 
 
+
 public interface OwnerRepository extends CrudRepository<OwnerDetails, Long> {
 
 	@Query(value="FROM OwnerDetails WHERE status = false" )
@@ -19,6 +20,10 @@ public interface OwnerRepository extends CrudRepository<OwnerDetails, Long> {
 	
 	public List <OwnerDetails> findById(Long id);
 	
+	
+	// public void  delete(Long id);
+
+	//public void delete(OwnerRole ownerRole); 
 	
 	
 

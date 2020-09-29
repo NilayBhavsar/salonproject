@@ -38,6 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			"/ownerRegister",
 			"/acceptOwnerReuest"
 			
+			
 	};
 
 	

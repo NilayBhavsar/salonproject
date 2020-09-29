@@ -98,7 +98,7 @@
 														<td ><a class="btn btn-sm bg-success-light"
 															href="acceptOwnerReuest?id=${i.id}"> Accept </a></td>
 														<td ><a class="btn btn-sm bg-danger-light"
-															href="deleteOwnerReuest?id=${i.id}"> Delete</a></td>
+															href="deleteOwnerReuest?id=${i.id}&rid=${i.ownerRoles.role}"> Delete</a></td>
 													</tr>
 												</c:forEach>
 

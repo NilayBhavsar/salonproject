@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.adminportal.domain.OwnerDetails;
+import com.adminportal.domain.security.OwnerRole;
 import com.adminportal.domain.security.PasswordResetToken;
 import com.adminportal.repository.OwnerRepository;
 import com.adminportal.repository.PasswordResetTokenRepository;
@@ -60,6 +61,24 @@ public class OwnerServiceImpl implements OwnerService {
 		passwordResetTokenRepository.save(myToken);
 		
 	}
+
+	/*@Override
+	public void delete(OwnerDetails ownerDetails) {
+		
+		 ownerRepository.delete(ownerDetails);
+		
+	}*/
+
+	
+
+	/*@Override
+	public void delete(OwnerRole ownerRole) {
+		
+		ownerRepository.delete(ownerRole);
+		
+	}
+*/
+	
 
 	
 

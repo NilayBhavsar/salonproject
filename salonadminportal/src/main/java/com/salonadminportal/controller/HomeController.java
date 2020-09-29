@@ -65,6 +65,8 @@ public class HomeController {
 			HttpServletRequest request,
 			Model model
 			) throws Exception{
+		
+		
 
 		
 		/*if (ownerService.findByUsername(username) != null) {
