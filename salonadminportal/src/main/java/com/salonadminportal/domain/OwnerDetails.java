@@ -34,8 +34,9 @@ public class OwnerDetails implements UserDetails {
 	@Column(name="username", nullable = false, updatable = false)
 	private String username;
 	private String password;
-	private String ownername;
-	
+	private String shopname;
+	private String firstname;
+	private String lastname;
 	private String city;
 	private String address;
 	private boolean status=false;
@@ -77,12 +78,28 @@ public class OwnerDetails implements UserDetails {
 	}
 	
 
-	public String getOwnername() {
-		return ownername;
+	public String getShopname() {
+		return shopname;
 	}
 
-	public void setOwnername(String ownername) {
-		this.ownername = ownername;
+	public void setShopname(String shopname) {
+		this.shopname = shopname;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getCity() {

@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.adminportal.domain.OwnerDetails;
 import com.adminportal.domain.security.OwnerRole;
@@ -76,7 +77,7 @@ private JavaMailSender mailSender;
 	}
 	
 	@GetMapping(value="/acceptOwnerReuest")
-	public String acceptOwnerReuest(@RequestParam Long id,Model model,HttpServletRequest request){
+	public String acceptOwnerReuest(@RequestParam Long id,Model model,HttpServletRequest request,final RedirectAttributes redirectAttributes){
 		
 		System.out.println("Controllerrrr::::::::");
 		
@@ -111,7 +112,8 @@ private JavaMailSender mailSender;
 		ownerService.save(ownerDetails);
 		
 		//model.addAttribute("emailSent", "true");
-	
+		String message = "Email Sent Successfully!";
+        redirectAttributes.addFlashAttribute("message", message);
 		
 		return "redirect:/ownerRegister";
 		
@@ -132,6 +134,7 @@ private JavaMailSender mailSender;
 		/*OwnerDetails ownerDetails = new OwnerDetails();
 		ownerDetails.setOwnerRoles(ownerRole.getOwnerDetails());
 		*/
+		
 		
 		//this.ownerService.delete(ownerRole);
 		

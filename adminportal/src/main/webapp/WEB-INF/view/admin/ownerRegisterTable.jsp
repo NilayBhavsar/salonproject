@@ -63,7 +63,8 @@
 					</div>
 				</div>
 				<!-- /Page Header -->
-
+				<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+ <c:out value ="${message}"></c:out>
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="card">
@@ -91,7 +92,7 @@
 													<tr>
 														<td class="text-center">${j.count}</td>
 														<td class="text-center">${i.username}</td>
-														<td class="text-center">${i.ownername}</td>
+														<td class="text-center">${i.shopname}</td>
 														<td class="text-center">${i.phone}</td>
 														<td class="text-center">${i.city}</td>
 														

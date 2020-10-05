@@ -12,7 +12,7 @@
 								<a href="ownerRegister"><i class="fe fe-layout"></i> <span>View Owner Register</span></a>
 							</li>
 							<li> 
-								<a href="specialities.html"><i class="fe fe-users"></i> <span>Specialities</span></a>
+								<a href="addCity"><i class="fe fe-users"></i> <span>Add City </span></a>
 							</li>
 							<li> 
 								<a href="doctor-list.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>

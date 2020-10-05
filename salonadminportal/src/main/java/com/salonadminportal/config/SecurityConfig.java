@@ -34,6 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			"/js/**",
 			"/image/**",
 			"/plugins/**",
+			"/html/**",
 			"/",
 			"/addSalon",
 			"/newUser"

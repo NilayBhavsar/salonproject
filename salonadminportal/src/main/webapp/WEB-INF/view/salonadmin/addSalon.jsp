@@ -16,15 +16,12 @@
 <link rel="stylesheet" href="userResources/css/bootstrap.min.css">
 
 <!-- Fontawesome CSS -->
-<link rel="stylesheet"
-	href="userResources/css/font-awesome.min.css">
+<link rel="stylesheet" href="userResources/css/font-awesome.min.css">
 
 <!-- Feathericon CSS -->
-<link rel="stylesheet"
-	href="userResources/css/feathericon.min.css">
+<link rel="stylesheet" href="userResources/css/feathericon.min.css">
 
-<link rel="stylesheet"
-	href="userResources/plugins/morris/morris.css">
+<link rel="stylesheet" href="userResources/plugins/morris/morris.css">
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="userResources/css/style.css">
@@ -47,9 +44,9 @@
 		<div class="header-left">
 			<a href="index.html" class="logo"> <img
 				src="userResources/img/logo.png" alt="Logo">
-			</a> <a href="index.html" class="logo logo-small"> <img
+			</a><!--  <a href="index.html" class="logo logo-small"> <img
 				src="userResources/img/logo-small.png" alt="Logo" width="30"
-				height="30">
+				height="30"> -->
 			</a>
 		</div>
 		<!-- /Logo -->
@@ -213,16 +210,18 @@
 								modelAttribute="ownerDetails">
 								<!-- <input type="hidden" name="csrf_token_name"
 									value="0146f123a4c7ae94253b39bca6bd5a5e"> -->
-								
-								<form:hidden path="id"/>
-							
+
+								<form:hidden path="id" />
+								<%-- <% String message = (String)request.getAttribute("message");
+									out.print("Message :: ::"+message);
+								%> --%>
 								<div class="service-fields mb-3">
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="form-group">
 												<label>Owner UserName<span class="text-danger">*</span>
-													<span style="color: red;">${usernameExists}</span>
-													</label>
+													<span style="color: red;"> <c:out value="${message}"></c:out></span>
+												</label>
 												<!-- <input
 											type="hidden" name="brand_name" id="brand_name" value="18"> -->
 												<!-- <input class="form-control" type="text" name="brand_name"
@@ -239,14 +238,14 @@
 										<div class="col-lg-6">
 											<div class="form-group">
 
-												<label>Owner Name<span class="text-danger">*</span>
+												<label>Shop Name<span class="text-danger">*</span>
 
 												</label>
 												<!-- <input
 											type="hidden" name="brand_name" id="brand_name" value="18"> -->
 												<!-- <input class="form-control" type="text" name="brand_name"
 													id="brand_name" value="" required=""> -->
-												<form:input path="ownername" class="form-control"
+												<form:input path="shopname" class="form-control"
 													id="owner_name" required="required" />
 											</div>
 										</div>
@@ -312,10 +311,6 @@
 										</div>
 									</div>
 								</div>
-
-
-
-
 
 
 								<!-- <div class="service-fields mb-3">

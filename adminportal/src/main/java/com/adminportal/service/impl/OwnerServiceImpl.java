@@ -71,13 +71,7 @@ public class OwnerServiceImpl implements OwnerService {
 
 	
 
-	/*@Override
-	public void delete(OwnerRole ownerRole) {
-		
-		ownerRepository.delete(ownerRole);
-		
-	}
-*/
+	/* */
 	
 
 	
